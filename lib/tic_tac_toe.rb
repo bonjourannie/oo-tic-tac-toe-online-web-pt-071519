@@ -39,6 +39,10 @@ class TicTacToe
     !position_taken?(index) && index.between?(0,8)
   end
   
+  def turn_count
+    @board.count{|square| square != " " }
+  end
+  
   def turn 
     puts "Please enter a number (1-9):"
     user_input = gets.strip
